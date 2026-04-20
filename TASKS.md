@@ -15,10 +15,10 @@
 - [] Lógica de salvar/remover token no localStorage
 - [] Redirecionamento automático (logado → feed, deslogado → login)
 - [] Guard de rotas protegidas
-- [] Configurar interceptor JWT no Axios
+- [SKIP] Configurar interceptor JWT no Axios
 
 ### 3 - Layout Principal
-- [] Navbar inferior (mobile) ou lateral (desktop) — Home, Explorar, Criar, Notificações, Perfil
+- [] Navbar inferior (mobile) ou lateral (desktop) — Home, Explorar, Criar e Perfil
 - [] Layout responsivo base (mobile-first)
 - [] Usar slots no layout base para áreas de conteúdo dinâmico (header, main, footer)
 - [] Usar componentes dinâmicos (`<component :is>`) para navegação ou troca de views
@@ -30,7 +30,7 @@
 - [] Ação de curtir/descurtir
 - [] Ação de comentar inline
 - [] Link pro perfil do autor
-  
+
 ### 5 - Criar Post
 - [ ] Tela de upload de imagem
 - [ ] Preview da imagem
@@ -52,13 +52,7 @@
 - [ ] Barra de busca (buscar usuários por nome/username)
 - [ ] Resultado de busca com link pro perfil
 
-### 8 - Notificações
-- [ ] Tela de listagem de notificações
-- [ ] Tipos: curtida, comentário, novo seguidor
-- [ ] Marcar como lida
-- [ ] Polling a cada X segundos pra checar novas notificações (badge no ícone)
-
-### 9 - Detalhes do Post
+### 8 - Detalhes do Post
 - [ ] Tela individual do post
 - [ ] Listagem de comentários paginada (com botão "carregar mais")
 - [ ] Campo pra adicionar comentário
