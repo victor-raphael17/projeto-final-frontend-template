@@ -12,7 +12,7 @@ As telas de login e cadastro permitem que o usuário acesse a plataforma. O toke
 
 ## Layout Principal
 
-A navegação é feita por uma barra inferior (mobile) ou lateral (desktop) com links para Home, Explorar, Criar Post, Notificações e Perfil. O layout base utiliza slots para áreas de conteúdo dinâmico (header, main, footer) e componentes dinâmicos (`<component :is>`) para troca de views.
+A navegação é feita por uma barra inferior (mobile) ou lateral (desktop) com links para Home, Explorar, Criar Post e Perfil. O layout base utiliza slots para áreas de conteúdo dinâmico (header, main, footer) e componentes dinâmicos (`<component :is>`) para troca de views.
 
 ## Feed
 
@@ -29,10 +29,6 @@ A tela de perfil exibe foto, bio e contadores de posts, seguidores e seguindo, c
 ## Explorar
 
 Grid de posts populares com barra de busca para encontrar usuários por nome ou username. Os resultados de busca linkam para o perfil encontrado.
-
-## Notificações
-
-Listagem de notificações dos tipos curtida, comentário e novo seguidor, com opção de marcar como lida. Polling periódico verifica novas notificações e exibe um badge no ícone da navbar.
 
 ## Detalhes do Post
 
