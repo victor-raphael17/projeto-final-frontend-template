@@ -30,21 +30,15 @@
 - [] Ação de curtir/descurtir
 - [] Ação de comentar inline
 - [] Link pro perfil do autor
-
-### 5 - Stories
-- [ ] Barra de stories no topo do feed
-- [ ] Visualizador de story (tela cheia, progresso, tap pra próximo)
-- [ ] Indicador de "já visto" vs "novo"
-- [ ] Tela de criação de story (upload de imagem)
-
-### 6 - Criar Post
+  
+### 5 - Criar Post
 - [ ] Tela de upload de imagem
 - [ ] Preview da imagem
 - [ ] Campo de legenda
 - [ ] Botão de publicar
 - [ ] Feedback de sucesso/erro
 
-### 7 - Perfil
+### 6 - Perfil
 - [ ] Tela de perfil (foto, bio, contadores: posts, seguidores, seguindo)
 - [ ] Grid de posts do usuário
 - [ ] Botão seguir/deixar de seguir (perfil alheio)
@@ -53,18 +47,18 @@
 - [ ] Lista de seguidores
 - [ ] Lista de seguindo
 
-### 8 - Explorar
+### 7 - Explorar
 - [ ] Grid de posts populares
 - [ ] Barra de busca (buscar usuários por nome/username)
 - [ ] Resultado de busca com link pro perfil
 
-### 9 - Notificações
+### 8 - Notificações
 - [ ] Tela de listagem de notificações
 - [ ] Tipos: curtida, comentário, novo seguidor
 - [ ] Marcar como lida
 - [ ] Polling a cada X segundos pra checar novas notificações (badge no ícone)
 
-### 10 - Detalhes do Post
+### 9 - Detalhes do Post
 - [ ] Tela individual do post
 - [ ] Listagem de comentários paginada (com botão "carregar mais")
 - [ ] Campo pra adicionar comentário
