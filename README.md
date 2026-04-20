@@ -17,7 +17,7 @@ Estados transitórios, como campos de formulário, preview de upload e mensagens
 
 ## Autenticação
 
-As telas de login e cadastro usam contas locais de teste. O token mock e os dados do usuário autenticado são salvos no `localStorage` e hidratados pelo store de autenticação assim que a aplicação sobe. Usuários autenticados são redirecionados automaticamente para o feed; acessos sem sessão ativa continuam bloqueados por guards de rota.
+As telas de login e cadastro usam contas locais persistidas no navegador. O store de autenticação hidrata perfis seed para teste, mantém a sessão ativa com token mock e atualiza os dados do usuário atual sempre que o perfil é editado. Usuários autenticados são redirecionados automaticamente para o feed; acessos sem sessão ativa continuam bloqueados por guards de rota.
 
 ## Layout Principal
 
@@ -33,12 +33,8 @@ Tela de upload com preview da imagem, campo de legenda e botão de publicar. A i
 
 ## Perfil
 
-A tela de perfil já mostra avatar, bio e métricas derivadas do feed local para o usuário atual ou para autores acessados a partir do feed. Edição de perfil, relacionamento entre contas e grid completo de posts continuam como próximos incrementos.
-
-## Explorar
-
-A área de explorar ainda está reservada para a próxima etapa. A estrutura de rota e layout já está pronta para receber grid de descoberta, busca por usuários e filtros.
+A área de perfil agora reúne avatar, bio, contadores de posts/seguidores/seguindo, grade de posts do usuário, botão de seguir/deixar de seguir para perfis alheios, edição do próprio perfil e telas dedicadas para listar seguidores e perfis seguidos. Tudo isso permanece em modo local-first, sincronizado entre `auth` e `feed`.
 
 ## Detalhes do Post
 
-A tela individual de post ainda não foi implementada. Hoje as interações principais acontecem direto no feed, e o detalhamento completo fica como evolução futura.
+A tela individual de post agora exibe imagem, legenda, autor, localização, data, contagem de curtidas e comentários em um layout dedicado. Os comentários aparecem paginados com botão de carregar mais, seguem aceitando novos envios na própria tela e, quando o post pertence ao usuário autenticado, a interface também libera a ação de deletar a publicação.
