@@ -3,33 +3,33 @@
 ### Frontend (UI do insta-clone)
 
 ### 1 - Setup do Projeto
-- [x] Inicializar projeto (Vue)
-- [x] Configurar estrutura de pastas
-- [x] Configurar rotas do frontend (Vue Router)
-- [x] Definir tema global (cores, fontes, espaçamentos no estilo Instagram)
-- [ ] Configurar serviço HTTP (Axios) com interceptors pra JWT
+- [] Inicializar projeto (Vue)
+- [] Configurar estrutura de pastas
+- [] Configurar rotas do frontend (Vue Router)
+- [] Definir tema global (cores, fontes, espaçamentos no estilo Instagram)
+- [] Configurar serviço HTTP (Axios) com interceptors pra JWT
 
 ### 2 - Autenticação
-- [x] Tela de Login
-- [x] Tela de Cadastro
-- [x] Lógica de salvar/remover token no localStorage
-- [x] Redirecionamento automático (logado → feed, deslogado → login)
-- [x] Guard de rotas protegidas
-- [SKIP] Configurar interceptor JWT no Axios
+- [] Tela de Login
+- [] Tela de Cadastro
+- [] Lógica de salvar/remover token no localStorage
+- [] Redirecionamento automático (logado → feed, deslogado → login)
+- [] Guard de rotas protegidas
+- [] Configurar interceptor JWT no Axios
 
 ### 3 - Layout Principal
-- [x] Navbar inferior (mobile) ou lateral (desktop) — Home, Explorar, Criar, Notificações, Perfil
-- [x] Layout responsivo base (mobile-first)
-- [x] Usar slots no layout base para áreas de conteúdo dinâmico (header, main, footer)
-- [x] Usar componentes dinâmicos (`<component :is>`) para navegação ou troca de views
+- [] Navbar inferior (mobile) ou lateral (desktop) — Home, Explorar, Criar, Notificações, Perfil
+- [] Layout responsivo base (mobile-first)
+- [] Usar slots no layout base para áreas de conteúdo dinâmico (header, main, footer)
+- [] Usar componentes dinâmicos (`<component :is>`) para navegação ou troca de views
 
 ### 4 - Feed
-- [x] Componente de Post (imagem, legenda, likes, comentários, data)
-- [x] Listagem do feed (posts de quem você segue)
-- [x] Scroll infinito ou paginação
-- [x] Ação de curtir/descurtir
-- [x] Ação de comentar inline
-- [x] Link pro perfil do autor
+- [] Componente de Post (imagem, legenda, likes, comentários, data)
+- [] Listagem do feed (posts de quem você segue)
+- [] Scroll infinito ou paginação
+- [] Ação de curtir/descurtir
+- [] Ação de comentar inline
+- [] Link pro perfil do autor
 
 ### 5 - Stories
 - [ ] Barra de stories no topo do feed
