@@ -3,40 +3,43 @@
 ### Frontend (UI do insta-clone)
 
 ### 1 - Setup do Projeto
-- [] Inicializar projeto (Vue)
-- [] Configurar estrutura de pastas
-- [] Configurar rotas do frontend (Vue Router)
-- [] Definir tema global (cores, fontes, espaçamentos no estilo Instagram)
-- [] Configurar serviço HTTP (Axios) com interceptors pra JWT
+- [x] Inicializar projeto (Vue)
+- [x] Configurar estrutura de pastas
+- [x] Configurar rotas do frontend (Vue Router)
+- [x] Configurar gerenciamento de estado compartilhado com Pinia
+- [x] Definir tema global (cores, fontes, espaçamentos no estilo Instagram)
+- [ ] Configurar serviço HTTP (Axios) com interceptors pra JWT
 
 ### 2 - Autenticação
-- [] Tela de Login
-- [] Tela de Cadastro
-- [] Lógica de salvar/remover token no localStorage
-- [] Redirecionamento automático (logado → feed, deslogado → login)
-- [] Guard de rotas protegidas
+- [x] Tela de Login
+- [x] Tela de Cadastro
+- [x] Centralizar sessão autenticada em store global
+- [x] Lógica de salvar/remover token no localStorage
+- [x] Redirecionamento automático (logado → feed, deslogado → login)
+- [x] Guard de rotas protegidas
 - [SKIP] Configurar interceptor JWT no Axios
 
 ### 3 - Layout Principal
-- [] Navbar inferior (mobile) ou lateral (desktop) — Home, Explorar, Criar e Perfil
-- [] Layout responsivo base (mobile-first)
-- [] Usar slots no layout base para áreas de conteúdo dinâmico (header, main, footer)
-- [] Usar componentes dinâmicos (`<component :is>`) para navegação ou troca de views
+- [x] Navbar inferior (mobile) ou lateral (desktop) — Home, Explorar, Criar e Perfil
+- [x] Layout responsivo base (mobile-first)
+- [x] Usar slots no layout base para áreas de conteúdo dinâmico (header, main, footer)
+- [x] Usar componentes dinâmicos (`<component :is>`) para navegação ou troca de views
 
 ### 4 - Feed
-- [] Componente de Post (imagem, legenda, likes, comentários, data)
-- [] Listagem do feed (posts de quem você segue)
-- [] Scroll infinito ou paginação
-- [] Ação de curtir/descurtir
-- [] Ação de comentar inline
-- [] Link pro perfil do autor
+- [x] Componente de Post (imagem, legenda, likes, comentários, data)
+- [x] Listagem do feed (posts de quem você segue)
+- [x] Scroll infinito ou paginação
+- [x] Centralizar feed, curtidas e comentários em store global
+- [x] Ação de curtir/descurtir
+- [x] Ação de comentar inline
+- [x] Link pro perfil do autor
 
 ### 5 - Criar Post
-- [ ] Tela de upload de imagem
-- [ ] Preview da imagem
-- [ ] Campo de legenda
-- [ ] Botão de publicar
-- [ ] Feedback de sucesso/erro
+- [x] Tela de upload de imagem
+- [x] Preview da imagem
+- [x] Campo de legenda
+- [x] Botão de publicar
+- [x] Feedback de sucesso/erro
 
 ### 6 - Perfil
 - [ ] Tela de perfil (foto, bio, contadores: posts, seguidores, seguindo)
@@ -46,11 +49,6 @@
 - [ ] Tela de editar perfil (foto, nome, bio)
 - [ ] Lista de seguidores
 - [ ] Lista de seguindo
-
-### 7 - Explorar
-- [ ] Grid de posts populares
-- [ ] Barra de busca (buscar usuários por nome/username)
-- [ ] Resultado de busca com link pro perfil
 
 ### 8 - Detalhes do Post
 - [ ] Tela individual do post
