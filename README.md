@@ -18,10 +18,6 @@ A navegação é feita por uma barra inferior (mobile) ou lateral (desktop) com 
 
 O feed exibe os posts das pessoas que o usuário segue, com scroll infinito ou paginação. Cada post mostra imagem, legenda, contagem de curtidas, comentários e data. É possível curtir/descurtir e comentar diretamente no feed, além de navegar para o perfil do autor.
 
-## Stories
-
-A barra de stories aparece no topo do feed. O visualizador exibe o story em tela cheia com barra de progresso e navegação por tap. Stories já vistos são diferenciados dos novos, e há uma tela dedicada para criação de story com upload de imagem.
-
 ## Criar Post
 
 Tela de upload com preview da imagem, campo de legenda e botão de publicar. Exibe feedback visual de sucesso ou erro após a requisição.
