@@ -50,12 +50,12 @@ Lista de tarefas para reconstruir o frontend. Cada item descreve comportamento e
 
 ## 4 - Feed (`/feed`)
 
-- [ ] `GET /feed` retorna `{ items: [...], next_cursor: string|null }`
-- [ ] Store `feed` normaliza os posts em um dicionario por id e mantem uma lista ordenada
+- [ ] `GET /feed` retorna o envelope padrao do Laravel API Resource sobre `CursorPaginator`: `{ data: [...], links: { first, last, prev, next }, meta: { path, per_page, next_cursor, prev_cursor } }`
+- [ ] Store `feed` normaliza `data` em um dicionario por id e mantem uma lista ordenada
 - [ ] Actions do store: `fetchFeed`, `loadMoreFeed(cursor)`, `toggleLike(postId)`, `addComment(postId, body)`, `createPost(formData)`
 - [ ] `normalizeComment` deve viver em `stores/feed.js`
 - [ ] `defaultAuthor()` deve viver em `stores/profileUtils.js` para evitar duplicar o autor fallback em post/comentario
-- [ ] Botao "carregar mais" visivel enquanto `next_cursor !== null`
+- [ ] Botao "carregar mais" visivel enquanto `meta.next_cursor !== null`; nova pagina via `GET /feed?cursor=<meta.next_cursor>`
 - [ ] Card de post exibe:
   - avatar + username do autor (link para `/profile?user=<username>`)
   - imagem do post
@@ -64,7 +64,7 @@ Lista de tarefas para reconstruir o frontend. Cada item descreve comportamento e
   - data relativa (ex.: "ha 2h")
   - contador de comentarios
   - campo inline para adicionar comentario
-- [ ] Curtir: `POST /posts/:id/like`. Descurtir: `DELETE /posts/:id/unlike`. Atualizar contador de forma otimista
+- [ ] Curtir: `POST /posts/:id/like`. Descurtir: `DELETE /posts/:id/like` (mesma URL, verbos diferentes). Atualizar contador de forma otimista
 - [ ] Comentar inline: `POST /posts/:id/comments` com `{ body }`
 
 ## 5 - Descobrir (`/discover`)
@@ -75,7 +75,7 @@ Lista de tarefas para reconstruir o frontend. Cada item descreve comportamento e
 - [ ] Store `follows` deve manter `followingIds` e `pendingIds` como `Set`, sempre trocando por um novo `Set` a cada mutacao para preservar reatividade
 - [ ] Botao "Seguir" / "Seguindo" por card:
   - seguir: `POST /users/:id/follow`
-  - deixar de seguir: `DELETE /users/:id/unfollow`
+  - deixar de seguir: `DELETE /users/:id/follow` (mesma URL, verbos diferentes)
 - [ ] Cards de usuarios devem usar `components/profile/AccountCard.vue`
 - [ ] Clique no card abre `/profile?user=<username>` ou `/profile` se for o proprio
 - [ ] Paginacao por pagina (`?page=<n>`)
@@ -102,7 +102,7 @@ Lista de tarefas para reconstruir o frontend. Cada item descreve comportamento e
 - [ ] Acoes de seguir/deixar de seguir devem usar o store `follows`
 - [ ] Acoes:
   - seguir: `POST /users/:id/follow`
-  - deixar de seguir: `DELETE /users/:id/unfollow`
+  - deixar de seguir: `DELETE /users/:id/follow` (mesma URL, verbos diferentes)
 - [ ] Botao "Editar perfil" aparece apenas no proprio perfil e leva a `/profile/edit`
 - [ ] Contadores de seguidores e seguindo levam a `/profile/list/followers` e `/profile/list/following` (preservando o `?user=` quando for perfil de terceiros)
 - [ ] Grid de posts: clicar em um post abre `/posts/:postId`
@@ -192,7 +192,7 @@ Estes itens nao fazem parte desta etapa porque mudam o formato do projeto ou exi
 | Posts | GET | `/posts/:id` |
 | Posts | DELETE | `/posts/:id` |
 | Posts | POST | `/posts/:id/like` |
-| Posts | DELETE | `/posts/:id/unlike` |
+| Posts | DELETE | `/posts/:id/like` |
 | Comments | GET | `/posts/:id/comments` |
 | Comments | POST | `/posts/:id/comments` |
 | Comments | DELETE | `/comments/:id` |
@@ -203,6 +203,6 @@ Estes itens nao fazem parte desta etapa porque mudam o formato do projeto ou exi
 | Users | GET | `/users/:id/following` |
 | Users | GET | `/users/:id/is-following` |
 | Users | POST | `/users/:id/follow` |
-| Users | DELETE | `/users/:id/unfollow` |
+| Users | DELETE | `/users/:id/follow` |
 | Users | PUT | `/users/me` |
 | Users | POST | `/users/me/avatar` (multipart) |

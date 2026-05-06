@@ -88,10 +88,9 @@ Serviços disponíveis:
 | [users.service.js](src/services/users.service.js) | `GET /users/:username`, `PUT /users/me`, `POST /users/me/avatar`, `GET /users/search`, `GET /users/suggestions`, `GET /users/:id/posts` |
 | [posts.service.js](src/services/posts.service.js) | `POST /posts`, `GET /posts/:id`, `PUT /posts/:id`, `DELETE /posts/:id` |
 | [feed.service.js](src/services/feed.service.js) | `GET /feed` (paginação por cursor) |
-| [likes.service.js](src/services/likes.service.js) | `POST /posts/:id/like`, `DELETE /posts/:id/unlike`, `GET /posts/:id/likes` |
+| [likes.service.js](src/services/likes.service.js) | `POST /posts/:id/like`, `DELETE /posts/:id/like`, `GET /posts/:id/likes` |
 | [comments.service.js](src/services/comments.service.js) | `GET/POST /posts/:id/comments`, `PUT/DELETE /comments/:id` |
-| [follows.service.js](src/services/follows.service.js) | `POST /users/:id/follow`, `DELETE /users/:id/unfollow`, `GET /users/:id/followers`, `GET /users/:id/following`, `GET /users/:id/is-following` |
-| [notifications.service.js](src/services/notifications.service.js) | `GET /notifications`, `GET /notifications/unread-count`, `PUT /notifications/read` |
+| [follows.service.js](src/services/follows.service.js) | `POST /users/:id/follow`, `DELETE /users/:id/follow`, `GET /users/:id/followers`, `GET /users/:id/following`, `GET /users/:id/is-following` |
 
 ## Gerenciamento de Estado
 
